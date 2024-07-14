@@ -1,0 +1,8 @@
+C:\Users\theyc\source\repos\nucleus-driver\nucleus-driver\nucleus_framework\nucleus\communication\communication.cpp;C:\Users\theyc\source\repos\nucleus-driver\build\intermediates\communication.obj
+C:\Users\theyc\source\repos\nucleus-driver\nucleus-driver\nucleus_framework\nucleus\eac\eac.cpp;C:\Users\theyc\source\repos\nucleus-driver\build\intermediates\eac.obj
+C:\Users\theyc\source\repos\nucleus-driver\nucleus-driver\nucleus_framework\nucleus\eac\nmi_bypass.cpp;C:\Users\theyc\source\repos\nucleus-driver\build\intermediates\nmi_bypass.obj
+C:\Users\theyc\source\repos\nucleus-driver\nucleus-driver\nucleus_framework\nucleus\impl\crt\crt.cpp;C:\Users\theyc\source\repos\nucleus-driver\build\intermediates\crt.obj
+C:\Users\theyc\source\repos\nucleus-driver\nucleus-driver\nucleus_framework\nucleus\impl\filesystem\file.cpp;C:\Users\theyc\source\repos\nucleus-driver\build\intermediates\file.obj
+C:\Users\theyc\source\repos\nucleus-driver\nucleus-driver\nucleus_framework\nucleus\impl\native\native.cpp;C:\Users\theyc\source\repos\nucleus-driver\build\intermediates\native.obj
+C:\Users\theyc\source\repos\nucleus-driver\nucleus-driver\nucleus_framework\nucleus\impl\kernel\kernel.cpp;C:\Users\theyc\source\repos\nucleus-driver\build\intermediates\kernel.obj
+C:\Users\theyc\source\repos\nucleus-driver\nucleus-driver\src\entry.cpp;C:\Users\theyc\source\repos\nucleus-driver\build\intermediates\entry.obj

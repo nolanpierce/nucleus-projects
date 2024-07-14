@@ -1,0 +1,62 @@
+;
+; nucleus-driver.inf
+;
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = System ; TODO: specify appropriate Class
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider    = %ManufacturerName%
+CatalogFile = nucleus-driver.cat
+DriverVer = 07/13/2024,0.49.56.29
+PnpLockdown = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+nucleus-driver.sys = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName% = Standard,NTamd64.10.0...16299 ; %13% support introduced in build 16299
+
+[Standard.NTamd64.10.0...16299]
+%nucleus-driver.DeviceDesc% = nucleus-driver_Device, Root\nucleus-driver ; TODO: edit hw-id
+
+[nucleus-driver_Device.NT]
+CopyFiles = File_Copy
+
+[File_Copy]
+nucleus-driver.sys
+
+;-------------- Service installation
+[nucleus-driver_Device.NT.Services]
+AddService = nucleus-driver,%SPSVCINST_ASSOCSERVICE%, nucleus-driver_Service_Inst
+
+; -------------- nucleus-driver driver install sections
+[nucleus-driver_Service_Inst]
+DisplayName    = %nucleus-driver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\nucleus-driver.sys
+
+[nucleus-driver_Device.NT.Wdf]
+KmdfService = nucleus-driver, nucleus-driver_wdfsect
+
+[nucleus-driver_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+ManufacturerName = "<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "nucleus-driver Installation Disk"
+nucleus-driver.DeviceDesc = "nucleus-driver Device"
+nucleus-driver.SVCDESC = "nucleus-driver Service"
