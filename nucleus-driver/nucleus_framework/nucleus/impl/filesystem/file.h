@@ -5,6 +5,6 @@
 
 namespace nucleus {
 	namespace filesystem {
-		NTSTATUS fetch_nucleus_setup_file(event_setup_file* buffer);
+		NTSTATUS retreive_file(PCWSTR file_path, void* buffer);
 	}
 }

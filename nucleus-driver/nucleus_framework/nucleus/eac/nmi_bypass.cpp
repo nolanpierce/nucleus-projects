@@ -28,6 +28,8 @@ IDT_ENTRY create_interupt_gate(void (*handler)()) {
     return entry;
 }
 
+
+//swapping the idt table to our custome one so we can swap the eac nmi handler with ireqt
 NTSTATUS init_interrupts() {
     PHYSICAL_ADDRESS maxAddr = { 0 };
     maxAddr.QuadPart = MAXULONG64;

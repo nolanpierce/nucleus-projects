@@ -5,4 +5,4 @@
 - spoof gpu
 - spoof cpu
 - spoof mobo
-- could do this for hv though or in bootkit when we map driver
+- could do this in hv though or in bootkit when we map driver so this is last

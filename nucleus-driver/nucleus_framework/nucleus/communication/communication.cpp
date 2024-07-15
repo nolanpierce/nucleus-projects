@@ -59,12 +59,16 @@ namespace nucleus {
 			return status;
 		}
 		
+
+		// havent decided if i am going to map the setup info with the driver or not
+		//if not fetch it from our file
 		NTSTATUS fetch_setup_file(event_setup_file* file)
 		{
 			return STATUS_SUCCESS;
 		}
 	}
 
+	//need to do
 	namespace setup {
 		
 		NTSTATUS communication(Kernel* kernel) {
